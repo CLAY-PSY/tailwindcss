@@ -391,7 +391,7 @@ export function parse(input: string, opts?: ParseOptions) {
     ) {
       let declaration = parseDeclaration(buffer)
       if (!declaration) {
-        if (buffer.length === 0) throw new Error('Unexpected semicolon')
+        if (buffer.length === 0) continue
         throw new Error(`Invalid declaration: \`${buffer.trim()}\``)
       }
 
